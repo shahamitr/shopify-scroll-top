@@ -1,0 +1,45 @@
+<a id="toTop" style="background: url('{{ 'Up.svg' | asset_url }}') left top no-repeat;opacity:0;" onclick="topFunction()">
+  <span class="sr-only">To Top</span>
+</a>
+<style>
+  #toTop {
+    text-decoration: none;
+    position: fixed;
+    bottom: 100px;
+    right: 2%;
+    overflow: hidden;
+    width: 98px;
+    height: 98px;
+    border: none;
+    text-indent: 100%;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+    cursor: pointer;
+}
+</style>
+<script>
+var toTop = document.getElementById("toTop");
+
+window.onscroll = function() {scrollFunction()};
+  
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    toTop.style.opacity = 1;
+    toTop.style.visibility = "visible";
+  } else {
+    toTop.style.opacity = 0;
+    toTop.style.visibility = "hidden";
+  }
+}
+  
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  //document.body.scrollTop = 0; // For Safari
+  //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera 
+  $('html, body').animate({
+        scrollTop: 0
+      }, 1000, function(){
+  });
+}
+</script>
