@@ -1,5 +1,5 @@
 # shopify-scroll-top
-Add ability to you shopify store, scroll to top on every page.
+Add ability to your shopify store, scroll to top on every page.
 
 Please follow the instruction to add the scroll to top component to your shopify page.
 
